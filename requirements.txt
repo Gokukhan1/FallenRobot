@@ -43,3 +43,14 @@ telegraph==2.2.0
 telethon==1.37.0
 tgcrypto==1.2.5
 wikipedia==1.4.0
+dnspython
+ffmpeg-python
+gitpython
+heroku3
+python-dotenv
+pyyaml
+spotipy
+unidecode
+yt-dlp
+youtube-search
+youtube-search-python
