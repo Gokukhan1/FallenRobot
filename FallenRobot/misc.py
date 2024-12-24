@@ -1,10 +1,10 @@
 import socket
 import time
 
+import config
 import heroku3
 from pyrogram import filters
 
-import config
 from FallenRobot.core.mongo import mongodb
 
 from .logging import LOGGER
