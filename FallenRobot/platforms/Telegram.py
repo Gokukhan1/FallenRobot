@@ -3,9 +3,9 @@ import os
 import time
 from typing import Union
 
+import config
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Voice
 
-import config
 from FallenRobot import app
 from FallenRobot.utils.formatters import (
     check_duration,
