@@ -1,3 +1,4 @@
+from config import BANNED_USERS
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 from pyrogram.types import Message
@@ -5,7 +6,6 @@ from pyrogram.types import Message
 from FallenRobot import app
 from FallenRobot.utils.database import set_cmode
 from FallenRobot.utils.decorators.admins import AdminActual
-from config import BANNED_USERS
 
 
 @app.on_message(filters.command(["channelplay"]) & filters.group & ~BANNED_USERS)
