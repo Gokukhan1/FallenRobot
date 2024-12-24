@@ -7,6 +7,14 @@ import telegram.ext as tg
 from pyrogram import Client, errors
 from telethon import TelegramClient
 
+from FallenRobot.core.bot import Anony
+from FallenRobot.core.dir import dirr
+from FallenRobot.core.git import git
+from FallenRobot.core.userbot import Userbot
+from FallenRobot.misc import dbb, heroku
+
+from .logging import LOGGER
+
 StartTime = time.time()
 
 # enable logging
@@ -179,3 +187,26 @@ from FallenRobot.modules.helper_funcs.handlers import (
 tg.RegexHandler = CustomRegexHandler
 tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
+
+
+
+
+
+dirr()
+git()
+dbb()
+heroku()
+
+app = Anony()
+userbot = Userbot()
+
+
+from .platforms import *
+
+Apple = AppleAPI()
+Carbon = CarbonAPI()
+SoundCloud = SoundAPI()
+Spotify = SpotifyAPI()
+Resso = RessoAPI()
+Telegram = TeleAPI()
+YouTube = YouTubeAPI()
