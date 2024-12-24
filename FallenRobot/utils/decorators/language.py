@@ -1,8 +1,8 @@
+from config import SUPPORT_CHAT
 from strings import get_string
 
 from FallenRobot import app
 from FallenRobot.misc import SUDOERS
-from config import SUPPORT_CHAT
 from FallenRobot.utils.database import get_lang, is_maintenance
 
 
