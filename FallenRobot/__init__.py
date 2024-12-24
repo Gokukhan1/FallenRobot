@@ -189,9 +189,6 @@ tg.CommandHandler = CustomCommandHandler
 tg.MessageHandler = CustomMessageHandler
 
 
-
-
-
 dirr()
 git()
 dbb()
