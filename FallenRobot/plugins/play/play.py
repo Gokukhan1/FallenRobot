@@ -1,12 +1,12 @@
-
 import random
 import string
 
+import config
+from config import BANNED_USERS, lyrical
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
-import config
 from FallenRobot import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
 from FallenRobot.core.call import Anony
 from FallenRobot.utils import seconds_to_min, time_to_seconds
@@ -23,7 +23,6 @@ from FallenRobot.utils.inline import (
 )
 from FallenRobot.utils.logger import play_logs
 from FallenRobot.utils.stream.stream import stream
-from config import BANNED_USERS, lyrical
 
 
 @app.on_message(
