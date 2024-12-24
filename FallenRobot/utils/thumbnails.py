@@ -3,11 +3,11 @@ import re
 
 import aiofiles
 import aiohttp
-from config import YOUTUBE_IMG_URL
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 from unidecode import unidecode
 from youtubesearchpython.__future__ import VideosSearch
 
+from config import YOUTUBE_IMG_URL
 from FallenRobot import app
 
 

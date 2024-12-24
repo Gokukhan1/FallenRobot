@@ -1,7 +1,7 @@
-from config import BANNED_USERS
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, Message
 
+from config import BANNED_USERS
 from FallenRobot import app
 from FallenRobot.utils.database import get_playmode, get_playtype, is_nonadmin_chat
 from FallenRobot.utils.decorators import language

@@ -1,8 +1,8 @@
-from config import BANNED_USERS
 from pyrogram import filters
 from pyrogram.enums import ChatMembersFilter, ChatMemberStatus, ChatType
 from pyrogram.types import Message
 
+from config import BANNED_USERS
 from FallenRobot import app
 from FallenRobot.utils.database import set_cmode
 from FallenRobot.utils.decorators.admins import AdminActual

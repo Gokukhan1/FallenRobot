@@ -3,7 +3,6 @@ import os
 from datetime import datetime, timedelta
 from typing import Union
 
-import config
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
 from pytgcalls import PyTgCalls, StreamType
@@ -18,6 +17,7 @@ from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQuality
 from pytgcalls.types.stream import StreamAudioEnded
 from strings import get_string
 
+import config
 from FallenRobot import LOGGER, YouTube, app
 from FallenRobot.misc import db
 from FallenRobot.utils.database import (

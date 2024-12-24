@@ -1,8 +1,8 @@
-from config import SUPPORT_CHAT, adminlist, confirmer
 from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from strings import get_string
 
+from config import SUPPORT_CHAT, adminlist, confirmer
 from FallenRobot import app
 from FallenRobot.misc import SUDOERS, db
 from FallenRobot.utils.database import (

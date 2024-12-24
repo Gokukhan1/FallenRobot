@@ -1,6 +1,6 @@
-from config import BANNED_USERS
 from pyrogram import filters
 
+from config import BANNED_USERS
 from FallenRobot import YouTube, app
 from FallenRobot.utils.channelplay import get_channeplayCB
 from FallenRobot.utils.decorators.language import languageCB
