@@ -30,6 +30,12 @@ from telethon import __version__ as tlhver
 
 LORD = "7078181502"
 
+import importlib
+
+from pytgcalls.exceptions import NoActiveGroupCall
+
+import config
+from config import BANNED_USERS
 from FallenRobot import (
     BOT_NAME,
     BOT_USERNAME,
@@ -39,37 +45,20 @@ from FallenRobot import (
     SUPPORT_CHAT,
     TOKEN,
     StartTime,
+    app,
     dispatcher,
     pbot,
     telethn,
     updater,
+    userbot,
 )
+from FallenRobot.core.call import Anony
+from FallenRobot.misc import sudo
 from FallenRobot.modules import ALL_MODULES
 from FallenRobot.modules.helper_funcs.chat_status import is_user_admin
 from FallenRobot.modules.helper_funcs.misc import paginate_modules
-
-import asyncio
-import importlib
-
-
-from pytgcalls.exceptions import NoActiveGroupCall
-
-import config
-from FallenRobot import LOGGER, app, userbot
-from FallenRobot.core.call import Anony
-from FallenRobot.misc import sudo
 from FallenRobot.plugins import ALL_MODULES
 from FallenRobot.utils.database import get_banned_users, get_gbanned
-from config import BANNED_USERS
-
-
-
-
-
-
-
-
-
 
 LOGS = -1002025076123
 
@@ -696,11 +685,6 @@ def donate(update: Update, context: CallbackContext):
             )
 
 
-
-
-
-
-
 async def init():
     if (
         not config.STRING1
@@ -744,17 +728,6 @@ async def init():
     await app.stop()
     await userbot.stop()
     LOGGER("gokuXMusic").info("Stopping gokuX Music Bot...")
-
-
-
-
-
-
-
-
-
-
-
 
 
 def migrate_chats(update: Update, context: CallbackContext):
