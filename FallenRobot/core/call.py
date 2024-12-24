@@ -3,6 +3,7 @@ import os
 from datetime import datetime, timedelta
 from typing import Union
 
+import config
 from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup
 from pytgcalls import PyTgCalls, StreamType
@@ -15,8 +16,8 @@ from pytgcalls.types import Update
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.input_stream.quality import HighQualityAudio, MediumQualityVideo
 from pytgcalls.types.stream import StreamAudioEnded
+from strings import get_string
 
-import config
 from FallenRobot import LOGGER, YouTube, app
 from FallenRobot.misc import db
 from FallenRobot.utils.database import (
@@ -36,7 +37,6 @@ from FallenRobot.utils.formatters import check_duration, seconds_to_min, speed_c
 from FallenRobot.utils.inline.play import stream_markup
 from FallenRobot.utils.stream.autoclear import auto_clean
 from FallenRobot.utils.thumbnails import get_thumb
-from strings import get_string
 
 autoend = {}
 counter = {}
@@ -502,9 +502,11 @@ class Call(PyTgCalls):
                     button = stream_markup(_, chat_id)
                     run = await app.send_photo(
                         chat_id=original_chat_id,
-                        photo=config.TELEGRAM_AUDIO_URL
-                        if str(streamtype) == "audio"
-                        else config.TELEGRAM_VIDEO_URL,
+                        photo=(
+                            config.TELEGRAM_AUDIO_URL
+                            if str(streamtype) == "audio"
+                            else config.TELEGRAM_VIDEO_URL
+                        ),
                         caption=_["stream_1"].format(
                             config.SUPPORT_CHAT, title[:23], check[0]["dur"], user
                         ),
