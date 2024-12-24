@@ -2,9 +2,9 @@ import os
 from random import randint
 from typing import Union
 
+import config
 from pyrogram.types import InlineKeyboardMarkup
 
-import config
 from FallenRobot import Carbon, YouTube, app
 from FallenRobot.core.call import Anony
 from FallenRobot.misc import db
