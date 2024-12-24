@@ -1,10 +1,10 @@
+from config import BANNED_USERS
 from pyrogram import filters
 
 from FallenRobot import YouTube, app
 from FallenRobot.utils.channelplay import get_channeplayCB
 from FallenRobot.utils.decorators.language import languageCB
 from FallenRobot.utils.stream.stream import stream
-from config import BANNED_USERS
 
 
 @app.on_callback_query(filters.regex("LiveStream") & ~BANNED_USERS)
