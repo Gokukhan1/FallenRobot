@@ -1,8 +1,8 @@
+from config import LOGGER_ID
 from pyrogram.enums import ParseMode
 
 from FallenRobot import app
 from FallenRobot.utils.database import is_on_off
-from config import LOGGER_ID
 
 
 async def play_logs(message, streamtype):
